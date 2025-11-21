@@ -281,13 +281,13 @@
       </label>
 
       <label>底部電話文字
-        <input type="text" id="in-footer-tel" value="(03)466-6666">
+        <input type="text" id="in-footer-tel" value="(03)456-7890">
       </label>
       <label>底部傳真文字
-        <input type="text" id="in-footer-fax" value="(03)455-5555">
+        <input type="text" id="in-footer-fax" value="(03)123-4567">
       </label>
       <label>底部手機文字
-        <input type="text" id="in-footer-mobile" value="0932-123456">
+        <input type="text" id="in-footer-mobile" value="0932-123-456">
       </label>
 
       <button type="button" onclick="fillToday()">日期填今天</button>
@@ -400,7 +400,6 @@
     // 日期輸入 -> 拆成年月日顯示
     document.getElementById("in-date").addEventListener("input", () => {
       const v = document.getElementById("in-date").value;
-      const fy = document.getElementById("f-date-year");
       const fm = document.getElementById("f-date-month");
       const fd = document.getElementById("f-date-day");
       if (!v) {
@@ -408,7 +407,6 @@
         return;
       }
       const d = new Date(v);
-      fy.textContent = d.getFullYear();
       fm.textContent = d.getMonth() + 1;
       fd.textContent = d.getDate();
     });
@@ -512,8 +510,7 @@ bindTime("in-time-end", "f-time-end-h", "f-time-end-m");
       set("f-header-title", 0.05, 0.02, 0.5, 0.05);
       // 公司名稱 (訂車公司)
       set("f-company", 0.13, 0.19, 0.25, 0.045);
-      // 日期 年/月/日
-      set("f-date-year", 0.70, 0.19, 0.06, 0.045);
+      // 日期 月/日
       set("f-date-month", 0.79, 0.19, 0.06, 0.045);
       set("f-date-day", 0.88, 0.19, 0.06, 0.045);
       // 乘客 / 電話
