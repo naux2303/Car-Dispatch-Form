@@ -156,42 +156,6 @@
         border: none;
       }
     }
-    /* 手機版（小螢幕）只顯示表單，隱藏右側簽單預覽 */
-@media (max-width: 768px) {
-  body {
-    margin: 8px;
-  }
-
-  .container {
-    flex-direction: column;   /* 上下排 */
-    gap: 12px;
-  }
-
-  form {
-    width: 100%;
-    max-width: none;
-    font-size: 15px;
-  }
-
-  input[type="text"],
-  input[type="tel"],
-  input[type="date"],
-  input[type="time"],
-  input[type="number"],
-  select,
-  textarea {
-    font-size: 16px;          /* 手機比較好點 */
-  }
-
-  button {
-    font-size: 15px;
-  }
-
-  /* 手機上先把預覽區藏起來，只當背景運算用 */
-  .sheet-wrapper {
-    display: none;
-  }
-}
   </style>
 </head>
 <body>
